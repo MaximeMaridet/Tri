@@ -1,0 +1,20 @@
+list=[84, 48, -5, 64, 65, -41,45]
+
+def selectMin(list):
+    var=list[0]
+    for i in list:
+        if var>i:
+            var=i
+    return var
+
+
+def triselect(list):
+    result=[]
+    while len(list)>0:
+        var=selectMin(list) 
+        list.remove(var)
+        result.append(var)
+
+    return result
+print(triselect(list))
+     
